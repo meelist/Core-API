@@ -1,2 +1,2 @@
-# Core-API
-This repository hosts a Web API, created with ASP NET Core and Pluralsight tutorials.
+# Core-WebApp
+This repository hosts a WebApp, created with ASP NET Core and Pluralsight tutorials.
