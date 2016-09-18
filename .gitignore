@@ -2,7 +2,9 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/WebApplication/src/WebApplication/obj
-/WebApplication/src/WebApplication/bin
-/WebApplication/.vs
-/WebApplication/src/WebApplication/project.lock.json
+/TheWorld/.vs
+/TheWorld/src/TheWorld/project.lock.json
+/TheWorld/src/TheWorld/TheWorld.xproj.user
+/TheWorld/src/TheWorld/Project_Readme.html
+/TheWorld/src/TheWorld/obj
+/TheWorld/src/TheWorld/bin
