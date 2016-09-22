@@ -2,7 +2,10 @@
    "MailSettings": {
       "ToAddress": "meelis@gmail.com"
    },
-   "ConnectionStrings": {
-      "WorldContextConnection": "Server=(localdb)\\MSSQLLocalDb;Database=TheWorldDb;Trusted_Connection=True;MultipleActiveResultSets=true" 
-   } 
+  "ConnectionStrings": {
+    "WorldContextConnection": "Server=(localdb)\\MSSQLLocalDb;Database=TheWorldDb;Trusted_Connection=True;MultipleActiveResultSets=true"
+  },
+  "Keys": {
+    "BingKey": "DONTEVERPUTKEYSTOSAUCECONTROL"
+  } 
 }
