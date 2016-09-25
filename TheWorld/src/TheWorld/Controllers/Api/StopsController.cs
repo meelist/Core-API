@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using TheWorld.Models;
@@ -13,6 +14,7 @@ using TheWorld.ViewModels;
 namespace TheWorld.Controllers.Api
 {
     [Route("/api/trips/{tripName}/stops")]
+    [Authorize]
     public class StopsController : Controller
     {
         private readonly IWorldRepository _repo;
@@ -31,7 +33,7 @@ namespace TheWorld.Controllers.Api
         {
             try
             {
-                var trip = _repo.GetTripByName(tripName);
+                var trip = _repo.GetTripByName(tripName, User.Identity.Name);
 
                 return Ok(Mapper.Map<IEnumerable<StopViewModel>>(trip.Stops.OrderBy(s => s.Order).ToList()));
             }
@@ -65,7 +67,7 @@ namespace TheWorld.Controllers.Api
                     }
 
                     // Save to the Database
-                    _repo.AddStop(tripName, newStop);
+                    _repo.AddStop(tripName, User.Identity.Name, newStop);
 
                     if (await _repo.SaveChangesAsync())
                     {
