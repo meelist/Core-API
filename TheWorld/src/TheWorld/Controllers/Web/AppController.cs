@@ -37,17 +37,19 @@ namespace TheWorld.Controllers.Web
       [Authorize]
       public IActionResult Trips()
       {
-         try
-         {
-            var data = _repo.GetAllTrips();
-            return View(data);
-         }
-         catch (Exception ex)
-         {
+         //try
+         //{
+         //   var data = _repo.GetAllTrips();
+         //   return View(data);
+         //}
+         //catch (Exception ex)
+         //{
 
-            _logger.LogError($"Failed to get trips in Trip page: {ex.Message}");
-            return Redirect("/error");
-         }
+         //   _logger.LogError($"Failed to get trips in Trip page: {ex.Message}");
+         //   return Redirect("/error");
+         //}
+
+          return View();
       }
 
       public IActionResult Contact()
